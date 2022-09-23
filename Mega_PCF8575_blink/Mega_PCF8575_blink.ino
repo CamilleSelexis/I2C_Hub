@@ -18,8 +18,8 @@ PCF8575 pcf8575(0x20);
 
 void setup()
 {
-	//Serial.begin(115200);
-
+	Serial.begin(115200);
+  Wire.begin();
 	// Set pinMode to OUTPUT
   pinMode(0,INPUT);
   pinMode(17,INPUT);
@@ -33,37 +33,37 @@ void setup()
   pcf8575.pinMode(P7,OUTPUT);
   
 	pcf8575.begin();
-  pcf8575.digitalWrite(P0,LOW);
-  pcf8575.digitalWrite(P1,LOW);
-  pcf8575.digitalWrite(P2,LOW);
-  pcf8575.digitalWrite(P3,LOW);
-  pcf8575.digitalWrite(P4,LOW);
-  pcf8575.digitalWrite(P5,LOW);
-  pcf8575.digitalWrite(P6,LOW);
+//  pcf8575.digitalWrite(P0,LOW);
+//  pcf8575.digitalWrite(P1,LOW);
+//  pcf8575.digitalWrite(P2,LOW);
+//  pcf8575.digitalWrite(P3,LOW);
+//  pcf8575.digitalWrite(P4,LOW);
+//  pcf8575.digitalWrite(P5,LOW);
+  pcf8575.digitalWrite(P6,HIGH);
   pcf8575.digitalWrite(P7,LOW);
 }
 
 void loop()
 {
-  //Serial.println("High");
-	pcf8575.digitalWrite(P0,HIGH);
-  pcf8575.digitalWrite(P1,HIGH);
-  pcf8575.digitalWrite(P2,HIGH);
-  pcf8575.digitalWrite(P3,HIGH);
-  pcf8575.digitalWrite(P4,HIGH);
-  pcf8575.digitalWrite(P5,HIGH);
-  pcf8575.digitalWrite(P6,HIGH);
+  Serial.println("High");
+//	pcf8575.digitalWrite(P0,HIGH);
+//  pcf8575.digitalWrite(P1,HIGH);
+//  pcf8575.digitalWrite(P2,HIGH);
+//  pcf8575.digitalWrite(P3,HIGH);
+//  pcf8575.digitalWrite(P4,HIGH);
+//  pcf8575.digitalWrite(P5,HIGH);
+//  pcf8575.digitalWrite(P6,HIGH);
   pcf8575.digitalWrite(P7,HIGH);
   delay(100);
   delay(5000);
-  //Serial.println("Low");
-  pcf8575.digitalWrite(P0,LOW);
-  pcf8575.digitalWrite(P1,LOW);
-  pcf8575.digitalWrite(P2,LOW);
-  pcf8575.digitalWrite(P3,LOW);
-  pcf8575.digitalWrite(P4,LOW);
-  pcf8575.digitalWrite(P5,LOW);
-  pcf8575.digitalWrite(P6,LOW);
+  Serial.println("Low");
+//  pcf8575.digitalWrite(P0,LOW);
+//  pcf8575.digitalWrite(P1,LOW);
+//  pcf8575.digitalWrite(P2,LOW);
+//  pcf8575.digitalWrite(P3,LOW);
+//  pcf8575.digitalWrite(P4,LOW);
+//  pcf8575.digitalWrite(P5,LOW);
+//  pcf8575.digitalWrite(P6,LOW);
   pcf8575.digitalWrite(P7,LOW);
   delay(100);
 	delay(5000);
